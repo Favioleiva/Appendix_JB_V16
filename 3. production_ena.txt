@@ -1,5 +1,5 @@
 // Define the common working directory
-local workingroute "D:\117. Cachuelos\4. Sobre Cuyes\1. Data\ENA"
+local workingroute "Put working route here"
 
 // ENA 2014
 import dbase using "`workingroute'\2014\505-Modulo778\07_Cap400A_1.dbf"
