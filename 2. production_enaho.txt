@@ -1,0 +1,489 @@
+**Data cleaning and filtering for guineapigs datasets for 2007-2023 except 2011**
+
+** Set the working directory
+local workingroute "Put your working directory here"
+
+** Load the dataset for 2007
+use "`workingroute'\ENAHO601_2007.dta", clear
+// Keep only the specified values in p601x in 2007
+keep if p601x == "CARNE DE CUY" | ///
+           p601x == "CARNE DE CUY EVISCERADO" | ///
+           p601x == "CUY" | ///
+           p601x == "CUY AL HORNO" | ///
+           p601x == "CUY CHACTADO" | ///
+           p601x == "CUY EN PIE" | ///
+           p601x == "CUY EN PIE O VIVO" | ///
+           p601x == "CUY EVISCERADO" | ///
+           p601x == "CUY FRITO" | ///
+           p601x == "CUY PREPARADO" | ///
+           p601x == "CUYADA" | ///
+           p601x == "Cuy en Pie o Vivo" | ///
+           p601x == "PICANTE DE CUY"
+rename a*o year		   
+save "D:\117. Cachuelos\4. Sobre Cuyes\0. Datos originales\Output\Cuyes_2007.dta",replace
+clear
+
+** Load the dataset for 2008
+use "`workingroute'\ENAHO601_2008.dta", clear
+// Keep only the specified values in p601x in 2008
+keep if p601x == "ASADO DE CUY" | ///
+           p601x == "CARNE DE CUY" | ///
+           p601x == "CUY CHACTADO" | ///
+           p601x == "CUY CHACTAO" | ///
+           p601x == "CUY COLORADO" | ///
+           p601x == "CUY CON PAPAS" | ///
+           p601x == "CUY EN PIE O VIVO" | ///
+           p601x == "CUY EN PIE VIVO" | ///
+           p601x == "CUY ESVICERADO" | ///
+           p601x == "CUY EVISCERADO" | ///
+           p601x == "CUY FRITO" | ///
+           p601x == "CUY PREPARADO" | ///
+           p601x == "CUYADA" | ///
+           p601x == "Cuy en Pie o Vivo"
+rename a*o year	
+save "D:\117. Cachuelos\4. Sobre Cuyes\0. Datos originales\Output\Cuyes_2008.dta", replace
+clear
+
+** Load the dataset for 2009
+use "`workingroute'\ENAHO601_2009.dta", clear		   
+// Keep only the specified values in p601x in 2009
+keep if p601x == "CARNE DE CUY" | ///
+           p601x == "CUY AL HORNO" | ///
+           p601x == "CUY CHACTADO CON TALLARIN" | ///
+           p601x == "CUY EN PIE O VIVO" | ///
+           p601x == "CUY ESVICERADO" | ///
+           p601x == "CUY EVISCERADO" | ///
+           p601x == "CUY EVISERADO" | ///
+           p601x == "CUY FRITO" | ///
+           p601x == "CUY PELADO EVISCERADO" | ///
+           p601x == "CUY PREPARADA" | ///
+           p601x == "CUY PREPARADO" | ///
+           p601x == "CUYADA" | ///
+           p601x == "Cuy en Pie o Vivo" | ///
+           p601x == "PICANTE DE CUY"
+rename a*o year
+save "D:\117. Cachuelos\4. Sobre Cuyes\0. Datos originales\Output\Cuyes_2009.dta", replace
+clear
+			   
+** Load the dataset for 2010
+use "`workingroute'\ENAHO601_2010.dta", clear	   
+// Keep only the specified values in p601x in 2010
+keep if p601x == "CARNE DE CUY" | ///
+           p601x == "CARNE DE CUY EVISCERADO" | ///
+           p601x == "CARNE SECA DE CUY" | ///
+           p601x == "CUY AL HORNO" | ///
+           p601x == "CUY ASADO" | ///
+           p601x == "CUY CHACTADO" | ///
+           p601x == "CUY COLORADO" | ///
+           p601x == "CUY EN PIE O VIVO" | ///
+           p601x == "CUY EVISCERADO" | ///
+           p601x == "CUY EVISERADO" | ///
+           p601x == "CUY FRITO" | ///
+           p601x == "CUY PELADO" | ///
+           p601x == "CUY PELADO EVISERADO" | ///
+           p601x == "CUY PREPARADO" | ///
+           p601x == "CUY RELLENO" | ///
+           p601x == "CUYADA" | ///
+           p601x == "Carne de Cuy" | ///
+           p601x == "Cuy en Pie o Vivo" | ///
+           p601x == "Cuy preparado"
+rename a*o year
+save "D:\117. Cachuelos\4. Sobre Cuyes\0. Datos originales\Output\Cuyes_2010.dta", replace
+clear
+	
+** Load the dataset for 2012
+use "`workingroute'\ENAHO601_2012.dta", clear		   
+// Keep only the specified values in p601x in 2012
+keep if p601x == "CARNE DE CUY" | ///
+           p601x == "CARNE DE CUY EVICERADO" | ///
+           p601x == "CARNE DE CUY EVISCERADO" | ///
+           p601x == "CUY" | ///
+           p601x == "CUY A LA PARRILLA" | ///
+           p601x == "CUY AL HORNO" | ///
+           p601x == "CUY AL HORNO RELLENO" | ///
+           p601x == "CUY BENEFICIADO" | ///
+           p601x == "CUY CHACTADO" | ///
+           p601x == "CUY CON PAPA" | ///
+           p601x == "CUY EN PIE" | ///
+           p601x == "CUY EN PIE O VIVO" | ///
+           p601x == "CUY EN PIE VIVO" | ///
+           p601x == "CUY EVISCERADO" | ///
+           p601x == "CUY EVISERADO" | ///
+           p601x == "CUY FRITO" | ///
+           p601x == "CUY FRITO CON PAPA" | ///
+           p601x == "CUY PREPARADO" | ///
+           p601x == "CUY RELLENO" | ///
+           p601x == "CUYADA" | ///
+           p601x == "CUYES GUIZADO" | ///
+           p601x == "Carne de Cuy" | ///
+           p601x == "Cuy en pie o vivo" | ///
+           p601x == "Cuy Eviscerado" | ///
+           p601x == "Cuy en Pie o Vivo" | ///
+           p601x == "PEPIAN DE CUY" | ///
+           p601x == "PICANTE DE CUY" | ///
+           p601x == "cuy preparado"
+rename a*o year
+save "D:\117. Cachuelos\4. Sobre Cuyes\0. Datos originales\Output\Cuyes_2012.dta", replace
+clear
+	
+** Load the dataset for 2013
+use "`workingroute'\ENAHO601_2013.dta", clear		   
+// Keep only the specified values in p601x for 2013
+keep if p601x == "CARNE DE CUY" | ///
+           p601x == "CARNE DE CUY EVISCERADO" | ///
+           p601x == "CUY" | ///
+           p601x == "CUY AL HORNO" | ///
+           p601x == "CUY CHACTADO" | ///
+           p601x == "CUY CHACTAO" | ///
+           p601x == "CUY CON PAPA" | ///
+           p601x == "CUY CON PAPA COCINADO" | ///
+           p601x == "CUY CON PAPA Y ARROZ" | ///
+           p601x == "CUY CON PAPAS" | ///
+           p601x == "CUY EN PIE" | ///
+           p601x == "CUY EN PIE O VIVO" | ///
+           p601x == "CUY EVISCERADO" | ///
+           p601x == "CUY FRITO" | ///
+           p601x == "CUY FRITO CON PAPA" | ///
+           p601x == "CUY PELADO" | ///
+           p601x == "CUY PREPARADO" | ///
+           p601x == "CUY RELLENO" | ///
+           p601x == "CUY RELLEO" | ///
+           p601x == "CUYADA" | ///
+           p601x == "Carne de CUY" | ///
+           p601x == "Carne de Cuy" | ///
+           p601x == "Carne de Cuy EVISCERADO" | ///
+           p601x == "Carne de Cuy eviscerado" | ///
+           p601x == "Cuy en Pie o Vivo" | ///
+           p601x == "PICANTE DE CUY" | ///
+           p601x == "PICANTE DE CUY CON TAMAL" | ///
+           p601x == "PICANTE DE CUYE"
+rename a*o year
+save "D:\117. Cachuelos\4. Sobre Cuyes\0. Datos originales\Output\Cuyes_2013.dta", replace
+clear
+	
+** Load the dataset for 2014
+use "`workingroute'\ENAHO601_2014.dta", clear		   
+// Keep only the specified values in p601x for 2014
+keep if p601x == "CARNE DE CUY" | ///
+           p601x == "CARNE DE CUY EVISCERADO" | ///
+           p601x == "CUY AL HORNO" | ///
+           p601x == "CUY CHACTADO" | ///
+           p601x == "CUY CHACTADO PREPARADO" | ///
+           p601x == "CUY COLORADO" | ///
+           p601x == "CUY CON PAPA" | ///
+           p601x == "CUY CON PAPAS" | ///
+           p601x == "CUY CON PAPAS COCINADO" | ///
+           p601x == "CUY EN PIE" | ///
+           p601x == "CUY EN PIE O VIVO" | ///
+           p601x == "CUY EN PIE VIVO" | ///
+           p601x == "CUY EVICERADO" | ///
+           p601x == "CUY EVISCERADO" | ///
+           p601x == "CUY FRITO" | ///
+           p601x == "CUY PREPARADO" | ///
+           p601x == "CUYADA" | ///
+           p601x == "Carne de Cuy" | ///
+           p601x == "Cuy en Pie o Vivo" | ///
+           p601x == "PICANTE DE CUY"
+rename a*o year
+save "D:\117. Cachuelos\4. Sobre Cuyes\0. Datos originales\Output\Cuyes_2014.dta", replace
+clear
+	
+** Load the dataset for 2015
+use "`workingroute'\ENAHO601_2015.dta", clear		   
+// Keep only the specified values in p601x for 2015
+keep if p601x == "CARNE DE CUY" | ///
+           p601x == "CARNE DE CUY EVISCERADO" | ///
+           p601x == "CARNE DE CUY PRECOCIDO" | ///
+           p601x == "CUY CHACTADO" | ///
+           p601x == "CUY CHACTAO" | ///
+           p601x == "CUY COLORADO" | ///
+           p601x == "CUY CON PAPAS" | ///
+           p601x == "CUY EN PIE" | ///
+           p601x == "CUY EN PIE O VIVO" | ///
+           p601x == "CUY EVICERADO" | ///
+           p601x == "CUY EVISCERADO" | ///
+           p601x == "CUY FRITO" | ///
+           p601x == "CUY FRITO CON PAPA" | ///
+           p601x == "CUY GUISADO" | ///
+           p601x == "CUY PREPARADO" | ///
+           p601x == "CUYADA" | ///
+           p601x == "CUYE COLORADO" | ///
+           p601x == "Carne de Cuy" | ///
+           p601x == "Cuy en Pie o Vivo" | ///
+           p601x == "PICANTE DE CUY" | ///
+           p601x == "PREPARADO CUY"
+rename a*o year
+save "D:\117. Cachuelos\4. Sobre Cuyes\0. Datos originales\Output\Cuyes_2015.dta", replace
+clear
+	
+** Load the dataset for 2016
+use "`workingroute'\ENAHO601_2016.dta", clear	   
+// Keep only the specified values in p601x for 2016
+keep if p601x == "CARNE DE CUY" | ///
+           p601x == "CARNE DE CUY EVISCERADO" | ///
+           p601x == "CUY AL HORNO" | ///
+           p601x == "CUY CHACTADO" | ///
+           p601x == "CUY CHACTAO" | ///
+           p601x == "CUY CON PAPAS" | ///
+           p601x == "CUY EN PIE" | ///
+           p601x == "CUY EVICERADO" | ///
+           p601x == "CUY EVISCERADO" | ///
+           p601x == "CUY FRITO" | ///
+           p601x == "CUY FRITO CON PAPA" | ///
+           p601x == "CUY GUISADO" | ///
+           p601x == "CUY PREPARADO" | ///
+           p601x == "CUYADA" | ///
+           p601x == "CUYE RELLENO" | ///
+           p601x == "Cuy en Pie o Vivo" | ///
+           p601x == "PICANTE DE CUY" | ///
+           p601x == "PICANTE DE CUYE" | ///
+           p601x == "SANGRE DE CUY"
+rename a*o year
+save "D:\117. Cachuelos\4. Sobre Cuyes\0. Datos originales\Output\Cuyes_2016.dta", replace
+clear
+	
+** Load the dataset for 2017
+use "`workingroute'\ENAHO601_2017.dta", clear		   
+// Keep only the specified values in p601x for 2017
+keep if p601x == "CARNE DE CUY" | ///
+           p601x == "CARNE DE CUY EVISCERADO" | ///
+           p601x == "CUY AL HORNO" | ///
+           p601x == "CUY CHACTADO" | ///
+           p601x == "CUY COLORADO" | ///
+           p601x == "CUY CON PAPAS" | ///
+           p601x == "CUY EVICERADO" | ///
+           p601x == "CUY EVISCERADO" | ///
+           p601x == "CUY FRITO" | ///
+           p601x == "CUY FRITO CON PAPA" | ///
+           p601x == "CUY GUISADO" | ///
+           p601x == "CUY PREPARADO" | ///
+           p601x == "CUYADA" | ///
+           p601x == "Cuy en Pie o Vivo" | ///
+           p601x == "PICANTE DE CUY"
+rename a*o year
+save "D:\117. Cachuelos\4. Sobre Cuyes\0. Datos originales\Output\Cuyes_2017.dta", replace
+clear
+	
+** Load the dataset for 2018
+use "`workingroute'\ENAHO601_2018.dta", clear		   
+// Keep only the specified values in p601x for 2018
+keep if p601x == "ARROZ CON CUY FRITO Y CAF" | ///
+           p601x == "CARNE DE CUY" | ///
+           p601x == "CARNE DE CUY AHUMADO" | ///
+           p601x == "CUY AL HORNO" | ///
+           p601x == "CUY CHACTADO" | ///
+           p601x == "CUY CHACTAO" | ///
+           p601x == "CUY CON PAPA" | ///
+           p601x == "CUY CON PAPAS" | ///
+           p601x == "CUY EVICERADO" | ///
+           p601x == "CUY EVISCERADO" | ///
+           p601x == "CUY FRITO" | ///
+           p601x == "CUY FRITO ARROZ YUCA EN" | ///
+           p601x == "CUY FRITO CON PAPA SANCOC" | ///
+           p601x == "CUY FRITO CON PAPAS Y ARR" | ///
+           p601x == "CUY PREPADO" | ///
+           p601x == "CUY PREPARADO" | ///
+           p601x == "CUY PREPARADO CON PAPAS Y" | ///
+           p601x == "CUYADA" | ///
+           p601x == "Cuy en Pie o Vivo" | ///
+           p601x == "HIGADO DE CUY" | ///
+           p601x == "PICANTE DE CUY" | ///
+           p601x == "SOPA DE CUY"
+rename a*o year
+save "D:\117. Cachuelos\4. Sobre Cuyes\0. Datos originales\Output\Cuyes_2018.dta", replace
+clear
+			   
+** Load the dataset for 2019
+use "`workingroute'\ENAHO601_2019.dta", clear		   
+// Keep only the specified values in p601x for 2019
+keep if p601x == "CARNE DE CUY" | ///
+           p601x == "CARNE DE CUY EVISCERADO" | ///
+           p601x == "CARNE DE CUY PRECOCIDA" | ///
+           p601x == "CUY AL HORNO" | ///
+           p601x == "CUY AL HORNO CON TALLARIN" | ///
+           p601x == "CUY ASADO" | ///
+           p601x == "CUY CHACTADO" | ///
+           p601x == "CUY CHACTAO" | ///
+           p601x == "CUY COLORADO" | ///
+           p601x == "CUY CON PAPA" | ///
+           p601x == "CUY CON PAPA REVUELTA" | ///
+           p601x == "CUY CON PAPAS" | ///
+           p601x == "CUY EVICERADO" | ///
+           p601x == "CUY EVISCERADO" | ///
+           p601x == "CUY FRITO" | ///
+           p601x == "CUY FRITO CON AJIACO" | ///
+           p601x == "CUY FRITO CON PAPAS" | ///
+           p601x == "CUY PREPARADO" | ///
+           p601x == "CUY RELLENO" | ///
+           p601x == "CUYADA" | ///
+           p601x == "Cuy en Pie o Vivo" | ///
+           p601x == "LOCRO DE CUY" | ///
+           p601x == "PICANTE DE CUY" | ///
+           p601x == "PICANTE DE CUY CON ARROZ" | ///
+           p601x == "SANGRE DE CUY" | ///
+           p601x == "SANGRE DE CUYE"
+rename a*o year
+save "D:\117. Cachuelos\4. Sobre Cuyes\0. Datos originales\Output\Cuyes_2019.dta", replace
+clear
+	
+** Load the dataset for 2020
+use "`workingroute'\ENAHO601_2020.dta", clear		   
+// Keep only the specified values in p601x for 2020
+keep if p601x == "CALDO DE CUY" | ///
+           p601x == "CARNE DE CUY" | ///
+           p601x == "CARNE DE CUY EVISCERADO" | ///
+           p601x == "CUY AL HORNO" | ///
+           p601x == "CUY CHACTADO" | ///
+           p601x == "CUY CON PAPA" | ///
+           p601x == "CUY CON PAPAS" | ///
+           p601x == "CUY CON PAPAS PREPARADO" | ///
+           p601x == "CUY DORADO" | ///
+           p601x == "CUY EVISCERADO" | ///
+           p601x == "CUY FRITO" | ///
+           p601x == "CUY FRITO CON PAPA" | ///
+           p601x == "CUY FRITO CON PAPA ARROZ" | ///
+           p601x == "CUY GUISADO" | ///
+           p601x == "CUY PREPARADO" | ///
+           p601x == "CUYADA" | ///
+           p601x == "Cuy en Pie o Vivo" | ///
+           p601x == "PACHAMANCA CON CUY" | ///
+           p601x == "PICANTE DE CUY" | ///
+           p601x == "SANGRE DE CUY"
+rename a*o year
+save "D:\117. Cachuelos\4. Sobre Cuyes\0. Datos originales\Output\Cuyes_2020.dta", replace
+clear
+	
+** Load the dataset for 2021
+use "`workingroute'\ENAHO601_2021.dta", clear		   
+// Keep only the specified values in p601x for 2021
+keep if p601x == "CALDO DE CUY" | ///
+           p601x == "CARNE DE CUY" | ///
+           p601x == "CUY AL HORNO CON PAPA SAN" | ///
+           p601x == "CUY CHACTADO" | ///
+           p601x == "CUY CON PAPA" | ///
+           p601x == "CUY EN PIE O VIVO" | ///
+           p601x == "CUY EVISCERADO" | ///
+           p601x == "CUY EVISERADO" | ///
+           p601x == "CUY FRITO" | ///
+           p601x == "CUY FRITO CON ARROZ Y EN" | ///
+           p601x == "CUY FRITO CON PAPA" | ///
+           p601x == "CUY FRITO CON PAPA Y ENSA" | ///
+           p601x == "CUY FRITO CON PAPAS" | ///
+           p601x == "CUY FRITO Y CHICHARRON DE" | ///
+           p601x == "CUY PREPARADO" | ///
+           p601x == "CUYADA" | ///
+           p601x == "CUYINA" | ///
+           p601x == "Cuy en Pie o Vivo" | ///
+           p601x == "GUISO CUY" | ///
+           p601x == "GUISO DE CUY"
+rename a*o year
+save "D:\117. Cachuelos\4. Sobre Cuyes\0. Datos originales\Output\Cuyes_2021.dta", replace
+clear
+	
+** Load the dataset for 2022
+use "`workingroute'\ENAHO601_2022.dta", clear		   
+// Keep only the specified values in p601x for 2022
+keep if p601x == "CALDO DE CUYE" | ///
+           p601x == "CARNE DE CUY" | ///
+           p601x == "CUY AL HORNO" | ///
+           p601x == "CUY CHACTADO" | ///
+           p601x == "CUY CHACTADO CON ARROZ Y" | ///
+           p601x == "CUY CHACTAO" | ///
+           p601x == "CUY COLORADO" | ///
+           p601x == "CUY CON PAPA GUISADA" | ///
+           p601x == "CUY CON PAPAS" | ///
+           p601x == "CUY DORADO" | ///
+           p601x == "Cuy en Pie o Vivo" | ///
+           p601x == "CUY EVISCERADO" | ///
+           p601x == "CUY EVISERADO" | ///
+           p601x == "CUY FRITO" | ///
+           p601x == "CUY FRITO CON PAPA" | ///
+           p601x == "CUY FRITO CON PAPA GUISAD" | ///
+           p601x == "CUY FRITO EN PAPA MOTE" | ///
+           p601x == "CUY PELADO" | ///
+           p601x == "CUY PREPARADO" | ///
+           p601x == "CUY RELLENO" | ///
+           p601x == "CUYADA" | ///
+           p601x == "CUYE FRITO" | ///
+           p601x == "CUYE RELLENO" | ///
+           p601x == "MENUDENCIA DE CUYE" | ///
+           p601x == "PICANTE DE CUY" | ///
+           p601x == "PICANTE DE PAPA CON CUY" | ///
+           p601x == "SANGRE DE CUY"
+rename a*o year
+save "D:\117. Cachuelos\4. Sobre Cuyes\0. Datos originales\Output\Cuyes_2022.dta", replace
+clear
+	
+** Load the dataset for 2023
+use "`workingroute'\ENAHO601_2023.dta", clear		   
+// Keep only the specified values in p601x for 2023
+keep if p601x == "CARNE CUY" | ///
+           p601x == "CARNE DE CUY" | ///
+           p601x == "CARNE DE CUY PELADO" | ///
+           p601x == "CHICHARRON DE CUYE" | ///
+           p601x == "CONCENTRADO PARA CUY" | ///
+           p601x == "CUY AL HORNO" | ///
+           p601x == "CUY AL PALO" | ///
+           p601x == "CUY BROSTHER CON PAPA DOR" | ///
+           p601x == "CUY CHACCTADO" | ///
+           p601x == "CUY CHACTADO" | ///
+           p601x == "CUY CHACTAO" | ///
+           p601x == "CUY COLORADO" | ///
+           p601x == "CUY CON PAPA GUISADA Y SA" | ///
+           p601x == "CUY CON PAPAS FRITAS" | ///
+           p601x == "CUY CON PAPAS GUISADAS" | ///
+           p601x == "CUY CON PAPAS Y ZARSA DE" | ///
+           p601x == "CUY EN PIE" | ///
+           p601x == "Cuy en Pie o Vivo" | ///
+           p601x == "CUY EVISCERADO" | ///
+           p601x == "CUY FRITO" | ///
+           p601x == "CUY FRITO CON AJIACO DE P" | ///
+           p601x == "CUY FRITO CON PAPAS SANCO" | ///
+           p601x == "CUY PELADO" | ///
+           p601x == "CUYADA" | ///
+           p601x == "CUYE AL HORNO CON ROCOTO" | ///
+           p601x == "MENUDENCIA DE CUYE" | ///
+           p601x == "MENUDENCIAS DE CUY" | ///
+           p601x == "PACHAMANCA DE CUY" | ///
+           p601x == "PICANTE DE CUY" | ///
+           p601x == "SANGRE DE CUY"
+rename a*o year
+save "D:\117. Cachuelos\4. Sobre Cuyes\0. Datos originales\Output\Cuyes_2023.dta", replace		   
+clear
+
+**Data cleaning and filtering for guineapigs datasets for 2011**
+
+** Load the dataset for 2011
+use "`workingroute'\ENAHO601_2011.dta", clear	   
+// Keep only the specified values in p601a and produc61 for 2011
+keep if p601a == "0809" | ///
+           produc61 == 110221
+save "D:\117. Cachuelos\4. Sobre Cuyes\0. Datos originales\Output\Cuyes_2011.dta", replace
+rename a*o year
+clear
+
+**For 2005, 2006, in the questionaire guineapigs were not included in the options, so the only source we can find information on possible guineapigs sales are in produc61
+
+** Load the dataset for 2004
+use "`workingroute'\ENAHO601_2004.dta", clear	   
+// Keep only the specified values produc61 for 2004
+keep if produc61 == 110221
+save "D:\117. Cachuelos\4. Sobre Cuyes\0. Datos originales\Output\Cuyes_2004.dta", replace
+rename a*o year
+clear
+
+** Load the dataset for 2005
+use "`workingroute'\ENAHO601_2005.dta", clear	   
+// Keep only the specified values produc61 for 2005
+keep if produc61 == 110221
+save "D:\117. Cachuelos\4. Sobre Cuyes\0. Datos originales\Output\Cuyes_2005.dta", replace
+rename a*o year
+clear
+
+** Load the dataset for 2006
+use "`workingroute'\ENAHO601_2006.dta", clear	   
+// Keep only the specified values produc61 for 2006
+keep if produc61 == 110221
+save "D:\117. Cachuelos\4. Sobre Cuyes\0. Datos originales\Output\Cuyes_2006.dta", replace
+rename a*o year
+clear

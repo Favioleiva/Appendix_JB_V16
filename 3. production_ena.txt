@@ -1,0 +1,57 @@
+// Define the common working directory
+local workingroute "D:\117. Cachuelos\4. Sobre Cuyes\1. Data\ENA"
+
+// ENA 2014
+import dbase using "`workingroute'\2014\505-Modulo778\07_Cap400A_1.dbf"
+* You may want to filter or rename variables here if needed
+save "`workingroute'\ENA2014.dta", replace
+clear
+
+// ENA 2015
+import dbase using "`workingroute'\2015\506-Modulo796\09_Cap400A_1.dbf"
+* Filtering guinea pig entries
+keep if P401A == 7
+save "`workingroute'\ENA2015.dta", replace
+clear
+
+// ENA 2016
+import dbase using "`workingroute'\2016\579-Modulo1130\09_Cap400a_1.dbf"
+* Filtering guinea pig entries
+keep if P401A == 7
+save "`workingroute'\ENA2016.dta", replace
+clear
+
+// ENA 2017
+use "`workingroute'\2017\615-Modulo1323\09_Cap400a_1.dta", clear
+* Filtering guinea pig entries
+keep if P401A == 7
+save "`workingroute'\ENA2017.dta", replace
+clear
+
+// ENA 2018
+use "`workingroute'\2018\650-Modulo-1459\10_Cap400a_1.dta", clear
+* Filtering guinea pig entries
+keep if P401A == 7
+save "`workingroute'\ENA2018.dta", replace
+clear
+
+// ENA 2019
+use "`workingroute'\2019\701-Modulo1538\10_Cap400a_1.dta", clear
+* Filtering guinea pig entries
+keep if P401A == 7
+save "`workingroute'\ENA2019.dta", replace
+clear
+
+// ENA 2021
+use "`workingroute'\2021\868-Modulo1800.dta", clear
+* Filtering guinea pig entries
+keep if P401A == 7
+save "`workingroute'\ENA2021.dta", replace
+clear
+
+// ENA 2022
+use "`workingroute'\2022\844-Modulo1745\09.dta", clear
+* Filtering guinea pig entries
+keep if P401A == 7
+save "`workingroute'\ENA2022.dta", replace
+clear

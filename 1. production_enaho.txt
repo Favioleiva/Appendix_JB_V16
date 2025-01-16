@@ -1,0 +1,17 @@
+*Production in ENAHO*
+
+*Download the datasets and relabel them as enahoprodx where x varies from 2004 to 2025 and change the path
+forvalues year = 2005/2023 {
+    // Define the file paths
+    local input_file `"path\ENAHO_produccion\enahoprod`year'.dta"'
+    local output_file `"path\Output_produccion\cuyprod`year'.dta"'
+    
+    // Load the dataset
+    use "`input_file'", clear
+    
+    // Filter the data
+    keep if p2500b == "3802"
+    
+    // Save the filtered data
+    save "`output_file'", replace
+}

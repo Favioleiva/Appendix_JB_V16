@@ -1,0 +1,84 @@
+// Regiones_8.dta is a dataset that compiles the information of the 8th module of the National Agricultural Census
+
+// ---------------------------------------------
+// 1. Count UA (Unidad Agropecuaria)
+// ---------------------------------------------
+use "path_to_dataset/Regiones_8.dta", clear
+
+// Select unique UA
+bysort Codind: keep if _n == 1
+
+// Count UA by Cod
+bysort Cod: egen num_ua = total(!missing(Codind))
+
+// Collapse to maximum number of UA by Cod
+collapse (max) num_ua, by(Cod)
+
+// Export the result
+export delimited using "path_to_export/UA_by_Cod.csv", replace
+
+// ---------------------------------------------
+// 2. Count UA with Animal Holders
+// ---------------------------------------------
+use "path_to_dataset/Regiones_8.dta", clear
+
+// Filter only animal holders
+keep if P067_02 == 1
+bysort Codind: keep if _n == 1
+
+// Count UA with animal holders by Cod
+bysort Cod: egen num_animal_ua = total(!missing(Codind))
+
+// Collapse to maximum number of animal UA by Cod
+collapse (max) num_animal_ua, by(Cod)
+
+// Export the result
+export delimited using "path_to_export/UA_animal_Cod.csv", replace
+
+// ---------------------------------------------
+// 3. Count UA with Guinea Pig Holders
+// ---------------------------------------------
+use "path_to_dataset/Regiones_8.dta", clear
+
+// Filter only guinea pig holders
+keep if P067_02 == 1
+keep if P067_01 == 757
+
+// Count UA with guinea pig holders by Cod
+bysort Cod: egen num_cuy_ua = total(!missing(Codind))
+
+// Collapse to maximum number of guinea pig UA by Cod
+collapse (max) num_cuy_ua, by(Cod)
+
+// Export the result
+export delimited using "path_to_export/UA_cuy_Cod.csv", replace
+
+// ---------------------------------------------
+// 4. Count Number of Guinea Pigs per SEA
+// ---------------------------------------------
+use "path_to_dataset/Regiones_8.dta", clear
+
+// Filter only guinea pig holders
+keep if P067_02 == 1
+keep if P067_01 == 757
+
+// Sum up the number of guinea pigs by SEA
+collapse (sum) P067_03, by(Cod)
+
+// Export the result
+export delimited using "path_to_export/Cuy_Cod.csv", replace
+
+// ---------------------------------------------
+// 5. Count Number of Guinea Pigs per UA
+// ---------------------------------------------
+use "path_to_dataset/Regiones_8.dta", clear
+
+// Filter only guinea pig holders
+keep if P067_02 == 1
+keep if P067_01 == 757
+
+// Sum up the number of guinea pigs by UA
+collapse (sum) P067_03, by(Codind)
+
+// Export the result
+export delimited using "path_to_export/Cuy_UA.csv", replace
